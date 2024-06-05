@@ -4,8 +4,67 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #b91450;
+}
+
 .ticket {
+    background-color: antiquewhite;
+    border: 1px solid black;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
     margin-top: 35px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#container {
+    max-width: 80%;
+    margin: 0 auto;
+    color: white;
+}
+
+#container h1,
+#container h2 {
+    text-align: center;
+    margin-top: 15px;
+}
+
+label {
+    display: inline-block;
+
+}
+
+input {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+table {
+    text-align: center;
+}
+
+.bottone {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: inline-block;
+    color: green;
+}
+
+.bottone a {
+    color: red;
+    text-decoration: none;
+}
+
+
+#name_user {
+    background-color: grey;
+    padding: 50px;
+    border-radius: 5px;
 }

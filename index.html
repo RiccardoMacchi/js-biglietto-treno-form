@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div id="container">
         <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
         <div class="ticket">
             <form action="#">
@@ -18,13 +18,16 @@
                 <label for="">Anni</label>
                 <input id="age_user" type="text">
             </form>
-            <div class="bottone" id="capture_data">bottone</div>
-            <div class="bottone"></div>
+            <div>
+                <div class="bottone" id="capture_data">Calcola</div>
+                <div class="bottone"><a href="index.html">Annulla</a></div>
+            </div>
+
         </div>
         <h2>IL TUO BIGLIETTO</h2>
-        <h3>Dettaglio Passeggieri</h3>
+        <h3>Dettaglio Passeggieri:</h3>
         <div class="ticket">
-            <div  id="biglietto">
+            <div id="name_user">
                 <span id="add_name">Nome Passeggero:</span>
             </div>
             <table>
@@ -40,7 +43,7 @@
                     <tr>
                         <td  id="ticket_type">Biglietto Standard</td>
                         <td>5</td>
-                        <td>932423</td>
+                        <td id="random_number"></td>
                         <td id="ticket_price">3.50€</td>
                     </tr>
                     

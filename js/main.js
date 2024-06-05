@@ -44,6 +44,7 @@ document.getElementById("capture_data").addEventListener("click",
     document.getElementById("add_name").innerHTML += "<br>" + userName;
     document.getElementById("ticket_type").innerHTML = typeTicket;
     document.getElementById("ticket_price").innerHTML = ticketPrice + "€";
+    document.getElementById("random_number").innerHTML = Math.floor(Math.random()*10000) + 1000;
 
 }
 )
