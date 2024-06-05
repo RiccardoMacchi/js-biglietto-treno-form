@@ -7,32 +7,35 @@
 // Variabili dei prezzi
 let priceKm = 0.21;
 let priceKmDisocunt;
+let numKmUser;
+let ageUser;
+let ticketPrice;
 
+console.log(ageUser, numKmUser)
 // Richiesta dati utente
-// let numKmUser = parseInt(prompt("Quanti chilomenti vuoi percorrere?"));
+document.getElementById("bottone").addEventListener("click",
+    () => {
+    numKmUser = parseInt(document.getElementById("km_user").value);
+    ageUser = parseInt(document.getElementById("age_user").value);
 
-// let ageUser = parseInt(prompt("Quanti anni hai?"));
+    console.log("questi sono i km scelti dall'utente " + numKmUser,"questi sono gli anni dell'utente " + ageUser);
+    // Condizione di età per sconto
+    if (ageUser > 65){
+        priceKmDisocunt = (0.21 * 0.4)
+    } else if (ageUser < 18){
+        priceKmDisocunt = (0.21 * 0.2)
+    } else {
+        priceKmDisocunt = 0
+    }
 
+    let ticketPriceInfinity = ((priceKm - priceKmDisocunt) * numKmUser);
+    ticketPrice = ticketPriceInfinity.toFixed(2)
 
-// Condizione di età per sconto
-if (ageUser > 65){
-    priceKmDisocunt = (0.21 * 0.4)
-} else if (ageUser < 18){
-    priceKmDisocunt = (0.21 * 0.2)
-} else {
-    priceKmDisocunt = 0
+    // Stampa prezzi a seconda dell'età
+    console.log("Il prezzo per il biglietto è di", ticketPrice + "€")
 }
+)
 
-console.log("questo è lo sconto al chilomentro", priceKmDisocunt);
 
-// Prezzo pagato al km a seconda dell'età
 
-let priceAgePerKm = (priceKm - priceKmDisocunt).toFixed(2)
-
-let ticketPriceInfinity = ((priceKm - priceKmDisocunt) * numKmUser);
-let ticketPrice = ticketPriceInfinity.toFixed(2)
-
-// Stampa prezzi a seconda dell'età
-console.log(ticketPrice)
-console.log("Il prezzo per il biglietto è di", ticketPrice + "€")
 
